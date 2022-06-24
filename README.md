@@ -15,7 +15,7 @@ Retrieve additional data from Twitter APIs, for each of the tweets in twitter-ar
 
 Each tweet's retweet count and favorite ("like") count at minimum, and any additional data you find interesting. Using the tweet IDs in the WeRateDogs Twitter archive, query the Twitter API for each tweet's JSON data using Python's Tweepy library and store each tweet's entire set of JSON data in a file called tweet_json.txt file. Each tweet's JSON data should be written to its own line. Then read this .txt file line by line into a pandas DataFrame with (at minimum) tweet ID, retweet count, and favorite count.
 
-#Assess
+# Assess
 Assessing is the process of checking the data sets for two things: quality issues and lack of tidiness. Data that has quality issues has problems with its contents: missing, corrupted, inacurate, duplicate or incorrect data. This is called "dirty data". In the contrary, "untidy" or "messy" data has specific structural issues.
 
 You look for these issues in two ways: visually and programatically. When you detect an issue you document it, to make cleaning easier. You don't write yet how to clean the data, but only state the observation.
@@ -23,5 +23,5 @@ You look for these issues in two ways: visually and programatically. When you de
 - Visual assessment is great for getting acquainted with the data and understanding what it is all about.
 - Programatical Assessment, after assessing visually the three datasets and identifying several tidiness issues, we now go deeper using Programatic Assessment.
 
-#Clean
+# Clean
 Cleaning the data is the third and last step in the data wrangling process. The issues that were identified are solved programatically, in three steps: Define, Code and Test. We begin by creating copies of each of our three datasets
