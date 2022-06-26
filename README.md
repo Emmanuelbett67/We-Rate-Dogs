@@ -25,3 +25,32 @@ You look for these issues in two ways: visually and programatically. When you de
 
 # Clean
 Cleaning the data is the third and last step in the data wrangling process. The issues that were identified are solved programatically, in three steps: Define, Code and Test. We begin by creating copies of each of our three datasets
+
+#Define
+Remove all observations in the feed_clean dataset that have values in the rows in_reply_to_status_id or retweeted_status_id. Then remove those two columns plus retweeted_status_user_id, retweeted_status_timestamp and in_reply_to_user_id
+
+In order to have observational units in their own table, we need to split the feed_clean data-set into a tweets table and a dogs table. This is a design decision because there are many several tweets that include information and ratings for more than one dog. Ratings and dog stages refer to dogs, whereas retweets an likes are related to the tweets.
+
+#Resources
+Pandas sort_values(): http://pandas.pydata.org/pandas-docs/stable/generated/pandas.DataFrame.sort_values.html
+Sort values issue in SO: https://stackoverflow.com/questions/44123874/dataframe-object-has-no-attribute-sort
+Reading and writing JSON to a file: https://stackabuse.com/reading-and-writing-json-to-a-file-in-python/
+SQL Alchemy: https://www.sqlalchemy.org/
+Pillow Documentation: https://pillow.readthedocs.io/en/stable/
+API tutorial of Mediawiki: https://www.mediawiki.org/wiki/API:Tutorial
+Requests Documentation: http://docs.python-requests.org/en/master/user/intro/
+Glob documentation: https://docs.python.org/3/library/glob.html
+Python Files I/O: https://www.tutorialspoint.com/python/python_files_io.htm
+Assessing a tweet with only its ID: https://www.bram.us/2017/11/22/accessing-a-tweet-using-only-its-id-and-without-the-twitter-api/
+Reading and writing files in Python: https://www.pythonforbeginners.com/files/reading-and-writing-files-in-python
+Test for a pattern in a Pandas dataframe: https://pandas.pydata.org/pandas-docs/stable/generated/pandas.Series.str.contains.html
+Tidy data: https://cran.r-project.org/web/packages/tidyr/vignettes/tidy-data.html
+Imputation concepts for filling missing data: https://en.wikipedia.org/wiki/Imputation_(statistics)
+Melt function in pandas: https://pandas.pydata.org/pandas-docs/version/0.23.4/generated/pandas.DataFrame.melt.html#pandas.DataFrame.melt
+Commenting several lines of code in Jupyter Notebooks: https://stackoverflow.com/questions/29885371/how-do-i-comment-out-multiple-lines-in-jupyter-ipython-notebook
+Extracting specific columns into a new dataframe: https://stackoverflow.com/questions/34682828/extracting-specific-selected-columns-to-new-dataframe-as-a-copy
+How to iterate through a pandas series: https://stackoverflow.com/questions/16476924/how-to-iterate-over-rows-in-a-dataframe-in-pandas and https://stackoverflow.com/questions/43222878/iterate-over-pandas-dataframe-and-update-the-value-attributeerror-cant-set-a
+Work with strings in pandas: https://pandas.pydata.org/pandas-docs/stable/text.htm
+Merging datasets in pandas: https://pandas.pydata.org/pandas-docs/stable/generated/pandas.DataFrame.merge.html
+Pandas .isin() function: https://pandas.pydata.org/pandas-docs/stable/generated/pandas.Series.isin.html
+Using .loc and .iloc to slice in pandas: https://www.shanelynn.ie/select-pandas-dataframe-rows-and-columns-using-iloc-loc-and-ix/
