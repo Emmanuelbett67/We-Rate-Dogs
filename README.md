@@ -26,12 +26,12 @@ You look for these issues in two ways: visually and programatically. When you de
 # Clean
 Cleaning the data is the third and last step in the data wrangling process. The issues that were identified are solved programatically, in three steps: Define, Code and Test. We begin by creating copies of each of our three datasets
 
-#Define
+# Define
 Remove all observations in the feed_clean dataset that have values in the rows in_reply_to_status_id or retweeted_status_id. Then remove those two columns plus retweeted_status_user_id, retweeted_status_timestamp and in_reply_to_user_id
 
 In order to have observational units in their own table, we need to split the feed_clean data-set into a tweets table and a dogs table. This is a design decision because there are many several tweets that include information and ratings for more than one dog. Ratings and dog stages refer to dogs, whereas retweets an likes are related to the tweets.
 
-#Resources
+# Resources
 Pandas sort_values(): http://pandas.pydata.org/pandas-docs/stable/generated/pandas.DataFrame.sort_values.html
 Sort values issue in SO: https://stackoverflow.com/questions/44123874/dataframe-object-has-no-attribute-sort
 Reading and writing JSON to a file: https://stackabuse.com/reading-and-writing-json-to-a-file-in-python/
